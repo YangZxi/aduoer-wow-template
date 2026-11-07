@@ -1,11 +1,11 @@
 # Aduoer Wow 音乐源模板
 
-[![CI](https://github.com/Aduoer-Music/aduoer-wow-template/actions/workflows/ci.yml/badge.svg)](https://github.com/Aduoer-Music/aduoer-wow-template/actions/workflows/ci.yml)
+[![CI](https://github.com/YangZxi/aduoer-wow-template/actions/workflows/ci.yml/badge.svg)](https://github.com/YangZxi/aduoer-wow-template/actions/workflows/ci.yml)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 这是 Aduoer Wow 的官方音乐源项目模板。你只需要连接目标音乐平台并完成数据转换，即可得到一个能被 Wow 客户端使用的音乐源服务。
 
-模板已经准备好 Node.js 服务、鉴权、测试和 Docker 构建；协议路由、请求参数、响应模型、运行时校验、能力检测与 OpenAPI 由 [`aduoer-wow-sdk`](https://github.com/Aduoer-Music/aduoer-wow-sdk) 统一提供。
+模板已经准备好 Node.js 服务、鉴权、测试和 Docker 构建；协议路由、请求参数、响应模型、运行时校验、能力检测与 OpenAPI 由 [`aduoer-wow-sdk`](https://github.com/YangZxi/aduoer-wow-sdk) 统一提供。
 
 > 本仓库用于创建新项目，不是需要持续合并的上游框架。项目创建后，通过 npm 升级 `aduoer-wow-sdk` 即可获得后续协议更新。
 
@@ -82,7 +82,7 @@ Adapter 必须返回 SDK 定义的模型，不要直接透传上游平台的原�
 - 未实现的接口会返回统一的 `501` 响应。
 - 路由、参数解析、错误格式和响应封装无需在项目中重复实现。
 
-完整的方法和字段定义以 [`aduoer-wow-sdk`](https://github.com/Aduoer-Music/aduoer-wow-sdk) 及 [API Reference](https://aduoer-music.github.io/docs/development/api-reference) 为准。
+完整的方法和字段定义以 [`aduoer-wow-sdk`](https://github.com/YangZxi/aduoer-wow-sdk) 及 [API Reference](https://aduoer-music.github.io/docs/development/api-reference) 为准。
 
 歌单歌曲排序由源实现。`src/app.ts` 的 `playlistSortOptions` 声明可选的 `key` 和用户可见 `label`；`src/adapter.ts` 的 `getPlaylistDetail(id, trackLimit, sort, order)` 接收客户端选择。未选择排序时 `sort`、`order` 均为 `undefined`，应保留目标平台的歌单原始顺序。
 
@@ -229,7 +229,7 @@ npm run build
 
 - [完整开发文档](https://docs.aduoer.app/development/guide/getting-started)
 - [交互式 API Reference](https://docs.aduoer.app/development/api-reference)
-- [`aduoer-wow-sdk`](https://github.com/Aduoer-Music/aduoer-wow-sdk)
+- [`aduoer-wow-sdk`](https://github.com/YangZxi/aduoer-wow-sdk)
 
 ## 许可证
 
